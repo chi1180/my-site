@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    width: 100%;
+    height: 300vh;
+}
+
+nav {
+    width: calc(200px - 1px);
+    padding-top: 70px;
+    height: calc(100vh - 70px);
+    border-right: 1px solid black;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+nav li {
+    width: 100%;
+    padding: 35px 0;
+    list-style: none;
+    border-top: 1px solid black;
+    transition: all 0.3s;
+}
+
+nav li:last-of-type:hover {
+    background-color: white;
+}
+
+nav li:hover {
+    background-color: lightgray;
+}
+
+section {
+    width: calc(100% - 200px);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+section:nth-of-type(2) {
+    top: 100vh;
+}
+
+section:nth-of-type(3) {
+    top: 200vh;
+}
+
+section .title {
+    font-size: 1.6rem;
+    padding: 20.4px;
+}
+
+header {
+    height: 70px;
+    border-bottom: 1px solid black;
+}
+
+main {
+    width: 100%;
+    height: calc(100% - 70px);
+}
+
+.day-container {
+    width: calc(100% - 10px);
+    height: 20px;
+    padding: 10px 0;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.day {
+    width: calc(100% / 7);
+    text-align: start;
+    font-size: 1.1rem;
+}
+
+#calender header {
+    position: relative;
+}
+
+.operation-bar img {
+    width: 25px;
+    height: 25px;
+    margin-left: 25px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px black, -1px -1px 1px black;
+}
+
+.operation-bar:last-child {
+    margin: 0 25px;
+}
+
+.operation-bar input {
+    font-size: 1.2rem;
+}
+
+.operation-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.calender {
+    width: calc(100% - 20px);
+    padding: 10px;
+    height: calc(100% - 61px);
+}
+
+.week {
+    display: flex;
+    width: 100%;
+    height: calc(100% / 6);
+}
+
+.day-box {
+    height: calc(100% - 10px);
+    width: calc(100% / 7 - 10px);
+    padding: 5px;
+    transition: all 0.1s linear;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.label {
+    font-size: 50%;
+    width: 90%;
+    padding-left: 10px;
+    margin: auto;
+    height: fit-content;
+    border-radius: 5px;
+    border: 1px solid black;
+    overflow-x: hidden;
+}
+
+.label-today {
+    width: 70%;
+    padding: 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+
+#homeworks ul {
+    width: calc(100% - 20px);
+    height: calc(100% - 55px);
+    overflow-y: scroll;
+    padding: 10px;
+    padding-top: 20px;
+    margin-bottom: 25px;
+}
+
+#homeworks ul li {
+    list-style: none;
+    width: calc(100% - 30px);
+    height: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 7px 0;
+    margin-left: 20px;
+    cursor: pointer;
+    display: flex;
+}
+
+#homeworks ul li:hover {
+    border: none;
+    box-shadow: 1px 1px 1px black, -1px -1px 1px black;
+}
+
+#homeworks ul li p {
+    width: calc(100% - 100px);
+    height: 100%;
+    overflow: hidden;
+}
+
+#homeworks ul li div img {
+    width: 17px;
+    height: 17px;
+    padding: 3px;
+    margin: 0 5px;
+}
+
+#homeworks ul li img:hover {
+    box-shadow: 1px 1px 1px black, -1px -1px 1px black;
+}
+
+.back-board {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-image: url("img_s/study.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: showBackBoard 0.5s ease-in-out;
+}
+
+.back-board input:first-of-type {
+    display: block;
+    margin: 15px auto;
+    width: 120px;
+    height: 25px;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.back-board input:nth-of-type(2) {
+    display: block;
+    margin: 25px auto;
+    width: 450px;
+    height: 25px;
+    padding: 0 10px;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.back-board textarea {
+    display: block;
+    margin: auto;
+    width: 450px;
+    height: 250px;
+    padding: 5px 10px;
+    border-radius: 0 5px 0 5px;
+    border: 1px solid black;
+}
+
+.back-board button {
+    width: 470px;
+    height: 25px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 25px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.back-board button:nth-of-type(2) {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+@keyframes showBackBoard {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hiddenBackBoard {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#manager main {
+    display: flex;
+    width: 100%;
+}
+
+#manager main div {
+    width: calc(50% - 1px);
+    height: calc(100% - 15px);
+    margin-bottom: 15px;
+    overflow-y: scroll;
+}
+
+.homework-label {
+    list-style: none;
+    width: calc(100% - 30px);
+    height: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 7px 0;
+    margin-left: 15px;
+    cursor: pointer;
+    overflow-x: hidden;
+}
+

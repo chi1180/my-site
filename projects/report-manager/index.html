@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#manager"><li>MANAGER</li></a>
+        <a href="#calender"><li>CALENDER</li></a>
+        <a href="#homeworks"><li>HOMEWORKS</li></a>
+        <li></li>
+    </nav>
+
+    <section id="manager">
+        <header>
+            <div class="title">Manager</div>
+        </header>
+        
+        <main>
+            <div>
+                <p class="title">今日の課題</p>
+                <ul id="today-homework"></ul>
+            </div>
+
+            <div>
+                <p class="title">直近の課題</p>
+                <ul id="near-day-homework"></ul>
+            </div>
+        </main>
+    </section>
+
+    <section id="calender">
+        <header>
+            <div class="title">Calender</div>
+            <div class="operation-bar">
+                <input type="date" id="calender-input">
+                <img onclick="changeMonth(-1)" src="img_s/back.png" alt="month to back">
+                <img onclick="changeMonth(1)" src="img_s/fd.png" alt="month to followed">
+            </div>
+        </header>
+        
+        <main>
+            <div class="day-container">
+                <div class="day">Sun</div>
+                <div class="day">Mon</div>
+                <div class="day">Tue</div>
+                <div class="day">Wed</div>
+                <div class="day">Thu</div>
+                <div class="day">Fri</div>
+                <div class="day">Sut</div>
+            </div>
+            <div class="calender">
+
+            </div>
+        </main>
+    </section>
+
+    <section id="homeworks">
+        <header>
+            <div class="title">Homeworks</div>
+            <div class="operation-bar">
+                <img src="img_s/add.png" alt="add new homework" onclick="addHomeWork()">
+            </div>
+        </header>
+        
+        <main>
+            <ul id="homework-list">
+            </ul>
+        </main>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

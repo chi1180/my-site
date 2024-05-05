@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>課題管理アプリ</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div class="title">課題管理アプリ</div>
+        <section>
+            <h1>始めに</h1>
+            <p>
+                今回は、課題管理アプリを作成しました。<br>
+                私は学生なのですが（ってAbout me で書いてたか）、この前課題の存在を知らないままになんか課題未提出とかなっちゃってしかも成績も下がるっていうことを体験したので、ぷんぷんなのです！<br>
+                といきたいところなのですが、全面的に私が悪いのでむーむーとしか言えません（むーむー）<br>
+                とまぁ、課題の提出計画票を教科ごとに出されても管理しにくい！し、いつ何を提出したらいいのかわかりにくい！<br>
+                そして私のような人間が自然発生するのです・・・<br>
+                ということで、すべての課題をまとめて管理できるように、アプリを作成しました！（おら～～ってやったんで３日で作成できました。どや、すごない？）
+            </p>
+        </section>
+        <section>
+            <h1>機能</h1>
+            <p>
+                この課題管理アプリは複雑です！（私にしてみれば）<br>
+                まず、セクションが３つ存在します！[ Manager ] [ Calender ] [ homeworks ] です。<br>
+                それぞれ、今日の課題と直近の課題を表示するセクション、カレンダー上で課題を確認できるセクション、課題をリスト表示して、また、課題を追加、削除、編集できるセクションです。<br>
+                ・・・すみません。作成期間のことを思い出してテンションめちゃ下がってます（ㇷフｆ）<br>
+                課題のデータはローカルストレージに保存するようにしています。また、データ容量の制限をオーバーしたりというふうになったら怖いので、月初め（～月１日）に先々月の課題データを削除するようにしています！<br>
+                それぞれのセクションごとに、もっと具体的に機能紹介をしてきます！（まず課題を作成しなくてはいけないので、[ homeworks ] セクションから機能紹介させていただきます）<br>
+                [ homeworks ]
+                <img src="img_s/sec-homework.png" alt="homework section image">
+                右上のプラスマークから、新しい課題を追加することができます。クリックすると、次のようになります。
+                <img src="img_s/add-homeworkd.png" alt="add homework image">
+                年月日、課題のタイトル、課題の詳細について、それそれの記入欄に入力して、[ 課題に追加 ] ボタンをクリックすると課題に追加できます。<br>
+                課題がリストに追加されます。
+                <img src="img_s/added-homework-list.png" alt="added homework list image">
+                課題をクリックすると、課題の詳細が表示されます。
+                <img src="img_s/show-about-homework-list.png" alt="show about homework list image">
+                リストに追加した課題の右端の、編集ボタンをクリックすると、課題について、編集ができます。    
+                <img src="img_s/change-homework.png" alt="change homework image">
+                [ 課題を更新 ] ボタンをクリックすると、課題を更新してデータを保存することができます。
+                <img src="img_s/changed-homework.png" alt="changed homework image">
+                リストに追加した課題の右端の、削除ボタンをクリックすると、課題を削除できます。（わ～い♪）
+                <img src="img_s/deleted-homework.png" alt=" deleted homework image">
+
+                [ calender ]
+                <img src="img_s/sec-calender.png" alt="calender section image">
+                今日の日付には [ Today ] のラベルが表示されます<br>
+                上の日付入力欄（初期では今日の年月日が入力されています）や２つのボタン（左は先月へ、右は翌月へカレンダーを進めます）でカレンダーを操作できます。<br>
+                （↓翌月へ進めました）
+                <img src="img_s/next-month-calender.png" alt="next month calender image">
+                課題がある場合、課題を追加する際に設定した年月日の場所に課題のラベルが表示されます！
+                <img src="img_s/have-homework-month.png" alt="have homework month image">
+
+                [ Manager ]
+                <img src="img_s/sec-manager.png" alt="manager section image">
+                今日の日付に設定して追加した課題と、直近の課題のリストを表示します<br>
+                例えば、次の画像のように、今日、課題があり、今日のほかにも２日、課題がある日がある場合、
+                <img src="img_s/some-homeworks-calender.png" alt=" some homeworks calender image">
+                次のようになります。
+                <img src="img_s/manager-created-homeworks.png" alt="manager created homeworks image">
+                こちらも、課題をクリックして課題の詳細を表示できます！
+                <img src="img_s/created-homework-show.png" alt="created homework show image">
+            </p>
+        </section>
+        <section>
+            <h1>アプリ</h1>
+            <p>
+                <a href="index.html">アプリへのリンク</a><br>
+                <a href="https://github.com/chi1180/homework-manager">GitHubでソースコードを見る</a><br>
+                <a href="https://github.com/chi1180/homework-manager/archive/refs/heads/main.zip">アプリのzipファイルをダウンロード</a>
+            </p>
+        </section>
+        <section>
+            <h1>最後に</h1>
+            <p>
+                この課題管理アプリは複雑です！（私にしてみれば）・・・初めにも書いたっけ？<br>
+                しかし、見るだけだとまぁずいぶんシンプルですね（涙<br>
+                でもソースコードはすごいのです！（いろんな意味で）ぜひとも、GitHub からソースコードを見てみて、改善点を指示してください！<br>
+                <br>
+                ちなみに、課題のデータは次のようにしてローカルストレージに保存されています！：
+                <img src="img_s/localdata.png" alt="local data image">
+                あ～疲れた<br>
+                ゴールディンうぇぃーくもあと一日です！
+            </p>
+        </section>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>
+

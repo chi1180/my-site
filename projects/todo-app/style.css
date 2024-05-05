@@ -1,0 +1,28 @@
+* {
+    font-family: serif;
+}
+
+.title {
+    text-align: center;
+}
+
+.list {
+    list-style: none;
+    width: 450px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    display: block;
+    margin: 3px auto;
+}
+
+.line {
+    text-decoration-line: line-through;
+    text-align: end;
+}
+
+.list-container {
+    padding-left: 0;
+}
+

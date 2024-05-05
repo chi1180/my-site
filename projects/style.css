@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    scrollbar-width: none;
+}
+
+main {
+    padding: 25px;
+    padding-bottom: 100px;
+    border-bottom: 2px solid black;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-size: 2.4rem;
+    padding: 0 70px 5px 10px;
+    margin-bottom: 50px;
+    width: fit-content;
+    border-bottom: 2px solid black;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h1 {
+    margin: 15px 0;
+    padding-left: 10px;
+    border-radius: 6px;
+    border-left: 2px solid black;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 250%;
+}
+
+img {
+    width: 100%;
+    margin: 15px 0;
+    border: 1px solid black;
+}
+

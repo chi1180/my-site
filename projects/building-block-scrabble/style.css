@@ -1,0 +1,23 @@
+* {
+    background-color: black;
+    color: green;
+}
+
+.title {
+    text-align: center;
+}
+
+.status {
+    font-size: 1.2rem;
+    display: flex;
+    position: absolute;
+    left: 60%;
+}
+
+.canvas {
+    padding: 1px;
+    border: 2px solid green;
+    display: block;
+    margin: auto;
+}
+
