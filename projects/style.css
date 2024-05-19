@@ -42,3 +42,23 @@ img {
     border: 1px solid black;
 }
 
+a {
+    color: #1d69a3;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration-line: none;
+    font-family: sans-serif;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+.description {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #33383f;
+    color: #d5d5dd;
+}
+
