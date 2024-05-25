@@ -147,6 +147,7 @@ a {
     width: 250px;
     height: 170px;
     padding: 5px;
+    padding-bottom: 15px;
     margin: 5px;
     border-radius: 5px;
     border: 1px solid black;
@@ -169,7 +170,7 @@ a {
 }
 
 
-@media (max-width: 560px) {
+@media (max-width: 767px) {
     header nav li {
         margin: 0 15px;
         font-size: 0.8rem;
@@ -190,6 +191,10 @@ a {
 
     tr {
         width: 100%;
+    }
+
+    .box {
+        margin: 5px auto;
     }
 }
 
