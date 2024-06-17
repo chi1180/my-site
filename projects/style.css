@@ -62,3 +62,11 @@ a:hover {
     color: #d5d5dd;
 }
 
+.code-editor {
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #25272b;
+    color: #d5d5dd;
+    font-family: 'Courier New', Courier, monospace;
+}
+
