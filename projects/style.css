@@ -5,11 +5,46 @@
     scrollbar-width: none;
 }
 
+body {
+    width: 1200px;
+    margin: auto;
+    background-color: white;
+    height: fit-content;
+    position: relative;
+}
+
 main {
-    padding: 25px;
     padding-bottom: 100px;
     border-bottom: 2px solid black;
     margin-bottom: 15px;
+    display: flex;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.article {
+    padding: 25px;
+    height: fit-content;
+}
+
+.left-ads {
+    padding-left: 1px;
+    width: 120px;
+}
+
+.left-ads * {
+    width: fit-content;
+}
+
+.inline-ads {
+    padding-left: 1px;
+    height: 80px;
+    width: calc(100% - 1px);
+    overflow: hidden;
+}
+
+.inline-ads * {
+    width: fit-content;
 }
 
 .title {
@@ -75,3 +110,17 @@ a:hover {
     font-family: 'Courier New', Courier, monospace;
 }
 
+@media screen and (max-width: 1200px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .left-ads {
+        display: none;
+    }
+    .inline-ads * {
+        max-width: 100%;
+    }
+}

@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,65 +8,259 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
 </head>
+
 <body>
     <main>
-        <div class="title">Push 通知の実装方法</div>
-        <section>
-            <h1>始めに</h1>
-            <p>
-                今回は、Push 通知を実装してみました。<br>
-                ついこの前、前回紹介させていただいた課題管理アプリの ver.2 を作成しました。その際に、Push 通知を実装したのですが、なにかと苦戦したり、問題が発生したりとしたので、ここに記載しとこーかなと思います。<br>
-                作成した課題管理アプリ（ver.2）については、また今度、書かせていただきたいと思います。
-            </p>
-        </section>
-        <section>
-            <h1>機能</h1>
-            <p>
-                普通の Push 通知です。<br>
-                思った以上に簡単に実装できました。<br>
-                でも、ちょっとしたところで悪戦苦闘したり、エラーが吐き出されてきたりと、いろいろあったです。<br>
-                <br>
-                それでは以下に、どのようにして Push 通知を実装したもうたのか、記述させていただきます。<br>
-                <br>
-                1. push.js を使用して、Push 通知の実装を行いました。（下記ページを参考にしました：<a href="https://pushjs.org/" target="_blank">参考ページ</a>）<br>
-                2. 実装は想像以上に単純で、簡単にコードを記述して実装できました。<br>
-                3. エラーになりました。<br>
-                4. 原因を探ると、どうやら script タグを記載する場所に問題があったようです。<br>
-                以下のような script タグを記述する必要があるのですが、自分で記述する script ファイルを src とした script タグのように、body タグの中に記述するのではなく、head タグの中に記述する必要があり、そうすることでエラーもなくなり、通知もうまく動きました。<br>
-                &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"&gt;&lt;/script&gt;<br>
-                <br>
-                しかし！<br>
-                いざリリースしてみると、通知が実行されません！原因を探るため調べてみると、どうやら http 問題だったそうです。<br>
-                Push 通知の実装は、セキュリティ上の理由から、https での通信でのみしか実行されないようです。<br>
-                つまり、私が初めに使用していたサーバ（http）ではPush 通知の使用は不可！！となりますことが判明したので、課題管理アプリを GitHub にアップロードして、GitHub Pages を使用して公開するようにしました。<br>
-                無料で https のサイトを持つことができるなんて…最高ですよね！<br>
-                <br>
-                以上のようにしたことで、Push 通知もきちんと動作するようになり、オールオッケーなお話になりました！<br>
-                <br>
-                追記：開発中は、Live Server という拡張機能を使用しながら、アプリを localhost で表示して確認していたのですが、どうやら localhost では、例外的に Push 通知を実行することが可能ということで、非常に学びになりました。
-            </p>
-        </section>
-        <section>
-            <h1>アプリ</h1>
-            <p>
-                今回のものは、「課題管理アプリ」の一つの機能にしか過ぎないので、「課題管理アプリ」へのリンクを添付させていただきます。<br>
-                アプリの詳細に関しては、Documentation に記載していますので、よろしければご確認ください。<br>
-                <a href="https://chi1180.github.io/homework-manager-ver.2-/">課題管理アプリ（ver.2）へのリンク</a><br>
-                <a href="https://github.com/chi1180/homework-manager-ver.2-">GitHubでソースコードを見る</a><br>
-            </p>
-        </section>
-        <section>
-            <h1>最後に</h1>
-            <p>
-                今回は開発の中での問題発生と、それについて解決していった流れを書かせていただきました。<br>
-                やはり、機能を実装したら、本番環境でのデバックが重要になるということを痛感させられましたね。<br>
-                課題管理アプリはもういい感じに作成できたので、今度、それについての記事を作成したいと思います！<br>
-                <br>
-                今後も開発に励んでいきます！！
-            </p>
-        </section>
+        <div class="left-ads">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1247" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001247.gif"
+                    width="120" height="120" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1247" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1248" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001248.gif"
+                    width="120" height="60" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1248" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1249" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001249.gif"
+                    width="120" height="500" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1249" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38390" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038390.png"
+                    width="120" height="600" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38390" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30593" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000030593.png"
+                    width="120" height="600" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30593" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1248" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001248.gif"
+                    width="120" height="60" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1248" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1253" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001253.gif"
+                    width="120" height="120" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1253" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1253" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001253.gif"
+                    width="120" height="120" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1253" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30603" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000030603.gif"
+                    width="120" height="600" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30603" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1231" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001231.gif"
+                    width="120" height="500" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1231" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38390" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038390.png"
+                    width="120" height="600" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38390" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1231" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001231.gif"
+                    width="120" height="500" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1231" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38390" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038390.png"
+                    width="120" height="600" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38390" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1231" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001231.gif"
+                    width="120" height="500" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1231" width="1" height="1"
+                style="border:none;">
+            <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38390" rel="nofollow"
+                referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038390.png"
+                    width="120" height="600" style="border:none;"></a><img
+                src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38390" width="1" height="1"
+                style="border:none;">
+        </div>
+        <div class="article">
+            <div class="title">Push 通知の実装方法</div>
+            <section>
+                <h1>始めに</h1>
+                <p>
+                    今回は、Push 通知を実装してみました。<br>
+                    ついこの前、前回紹介させていただいた課題管理アプリの ver.2 を作成しました。その際に、Push
+                    通知を実装したのですが、なにかと苦戦したり、問題が発生したりとしたので、ここに記載しとこーかなと思います。<br>
+                    作成した課題管理アプリ（ver.2）については、また今度、書かせていただきたいと思います。
+                </p>
+            </section>
+            <div class="inline-ads">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30601" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000030601.png" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30601" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+            </div>
+            <section>
+                <h1>機能</h1>
+                <p>
+                    普通の Push 通知です。<br>
+                    思った以上に簡単に実装できました。<br>
+                    でも、ちょっとしたところで悪戦苦闘したり、エラーが吐き出されてきたりと、いろいろあったです。<br>
+                    <br>
+                    それでは以下に、どのようにして Push 通知を実装したもうたのか、記述させていただきます。<br>
+                    <br>
+                    1. push.js を使用して、Push 通知の実装を行いました。（下記ページを参考にしました：<a href="https://pushjs.org/"
+                        target="_blank">参考ページ</a>）<br>
+                    2. 実装は想像以上に単純で、簡単にコードを記述して実装できました。<br>
+                    3. エラーになりました。<br>
+                    4. 原因を探ると、どうやら script タグを記載する場所に問題があったようです。<br>
+                    以下のような script タグを記述する必要があるのですが、自分で記述する script ファイルを src とした script タグのように、body タグの中に記述するのではなく、head
+                    タグの中に記述する必要があり、そうすることでエラーもなくなり、通知もうまく動きました。<br>
+                    &lt;script
+                    src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"&gt;&lt;/script&gt;<br>
+                    <br>
+                    しかし！<br>
+                    いざリリースしてみると、通知が実行されません！原因を探るため調べてみると、どうやら http 問題だったそうです。<br>
+                    Push 通知の実装は、セキュリティ上の理由から、https での通信でのみしか実行されないようです。<br>
+                    つまり、私が初めに使用していたサーバ（http）ではPush 通知の使用は不可！！となりますことが判明したので、課題管理アプリを GitHub にアップロードして、GitHub Pages
+                    を使用して公開するようにしました。<br>
+                    無料で https のサイトを持つことができるなんて…最高ですよね！<br>
+                    <br>
+                    以上のようにしたことで、Push 通知もきちんと動作するようになり、オールオッケーなお話になりました！<br>
+                    <br>
+                    追記：開発中は、Live Server という拡張機能を使用しながら、アプリを localhost で表示して確認していたのですが、どうやら localhost では、例外的に Push
+                    通知を実行することが可能ということで、非常に学びになりました。
+                </p>
+            </section>
+            <div class="inline-ads">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30601" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000030601.png" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30601" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+            </div>
+            <section>
+                <h1>アプリ</h1>
+                <p>
+                    今回のものは、「課題管理アプリ」の一つの機能にしか過ぎないので、「課題管理アプリ」へのリンクを添付させていただきます。<br>
+                    アプリの詳細に関しては、Documentation に記載していますので、よろしければご確認ください。<br>
+                    <a href="https://chi1180.github.io/homework-manager-ver.2-/">課題管理アプリ（ver.2）へのリンク</a><br>
+                    <a href="https://github.com/chi1180/homework-manager-ver.2-">GitHubでソースコードを見る</a><br>
+                </p>
+            </section>
+            <div class="inline-ads">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30601" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000030601.png" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30601" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+                <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+            </div>
+            <section>
+                <h1>最後に</h1>
+                <p>
+                    今回は開発の中での問題発生と、それについて解決していった流れを書かせていただきました。<br>
+                    やはり、機能を実装したら、本番環境でのデバックが重要になるということを痛感させられましたね。<br>
+                    課題管理アプリはもういい感じに作成できたので、今度、それについての記事を作成したいと思います！<br>
+                    <br>
+                    今後も開発に励んでいきます！！
+                </p>
+            </section>
+        </div>
     </main>
+    <div class="inline-ads">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30601" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000030601.png" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=30601" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001245.gif" width="380" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1245" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001244.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591642&p_id=54&pc_id=54&pl_id=1244" width="1" height="1" style="border:none;">
+        <a href="//af.moshimo.com/af/c/click?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1762/000000038393.gif" width="234" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4591643&p_id=2312&pc_id=4967&pl_id=38393" width="1" height="1" style="border:none;">
+    </div>
     <script src="../script.js"></script>
 </body>
-</html>
 
+</html>
