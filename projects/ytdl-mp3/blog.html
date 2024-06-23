@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube の動画、Commandprompt から .mp3 で DL できる？</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <div class="title">Youtube の動画、Commandprompt から .mp3 で DL できる？</div>
+        <section>
+            <h1>始めに</h1>
+            <p>
+                Hello Youtube !!<br>
+                ということで、（？）ゆーちゅーぶのミュージック動画を自分の PC のコマンドプロンプトから DL できたらなんかかっこよくないかい？<t
+                    style="text-decoration-line: line-through;">（ッフ）</t><br>
+                ということで、（汗<br>
+                この記事ではあなたの PC のコマンドプロンプトからどのようにして Youtube の動画を .mp3（ミュージックファイル）でダウンロードすることができるのか、記載されています。<br>
+                <br>
+            </p>
+            <div class="description">
+                <p>
+                    ※Youtube の利用規約には次のように記載されています。悪しからず♪<br>
+                    本サービスの利用には制限があり、以下の行為が禁止されています。<br>
+                    1.
+                    本サービスまたはコンテンツのいずれかの部分に対しても、アクセス、複製、<strong>ダウンロード</strong>、配信、送信、放送、展示、販売、ライセンス供与、改変、修正、またはその他の方法での使用を行うこと。ただし、（a）本サービスによって明示的に承認されている場合、または（b）YouTube
+                    および（適用される場合）各権利所持者が事前に書面で許可している場合を除きます。
+                </p>
+            </div>
+        </section>
+        <section>
+            <h1>使い方</h1>
+            <p>
+                実際のところ、非常に簡単に環境を用意することができます。<br>
+            </p>
+            <ol>
+                <li>Node.js をインストール</li>
+                <li><a href="https://github.com/joshunrau/ytdl-mp3">ytdl-mp3 が存在する git repository</a> より、npm
+                    を介してのインストールコマンドを参照</li>
+            </ol>
+            <br>
+            <p>
+                以上で、あなたの PC のコマンドプロンプトは 世界の Youtube から 動画音源をダウンロードするマジックぱわーを手に入れるのでした…<br>
+                ・・・具体的に説明すると、<br>
+                Node.js 入れる<br>
+                コマンドプロンプトに以下のコマンド入力してエンター<br>
+            </p>
+            <br>
+            <div class="code-editor">
+                npm install -g ytdl-mp3
+            </div>
+            <p>
+                これで後は動画の音源を入れる方法ですが…<br>
+                以下を参照してコマンドプロンプトに入力して Enter すれば OK です。<br>
+            </p>
+            <div class="code-editor">
+                Usage: ytdl-mp3 [options] &lt;url&gt;<br>
+                <br>
+                A NodeJS package and command-line tool for downloading music from YouTube, including automatic
+                retrieval of ID3 tags and album art via iTunes.<br>
+                <br>
+                Arguments:<br>
+                url url of video to download<br>
+                <br>
+                Options:<br>
+                -V, --version output the version number<br>
+                -o --output-dir <path> path to output directory<br>
+                -n --no-get-tags skip extracting/applying id3 tags<br>
+                -v --verify-tags verify id3 tags fetched from itunes<br>
+                -h, --help display help for command
+            </div>
+            <br>
+            <div class="code-editor">
+                >>>ytdl-mp3 https://www.youtube.com/watch?v=uRE8oEP9_bI
+            </div>
+        </section>
+        <section>
+            <h1>最後に</h1>
+            <p>
+                以上のことをしてしまったあなた、もうこちら側の人間です<br>
+                悪しからず♪<br>
+                <br>
+                github の src をチラ見してみると、どうやら ytdl-core を一緒に使って、そっちでまず DL してたぶんその後 mp3 にフォーマットして返す…みたいなことをしてるのかなと思います。<br>
+                多分です＿・・＿<br>
+                今度の記事では、私自身の学習もかねて、ytdl-core がどうやって動いてるのか解説できたらなと思います。<br>
+                <br>
+                最後まで読んでくれてありがとう！！<br>
+                <br>
+                <br>
+                ※この記事は、Qiita に投稿した記事を流用しています。アイディアゼロになっちゃった週間にご理解、ご協力をよろしくお願いします。
+            </p>
+        </section>
+    </main>
+    <script src="../script.js"></script>
+</body>
+
+</html>

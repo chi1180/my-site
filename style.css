@@ -146,10 +146,10 @@ a {
 
 .box {
     width: 250px;
-    height: 170px;
+    height: 190px;
     padding: 5px;
     padding-bottom: 15px;
-    margin: 5px;
+    margin: 10px;
     border-radius: 5px;
     border: 1px solid black;
     transition: all 0.25s linear;

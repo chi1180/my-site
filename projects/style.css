@@ -24,6 +24,11 @@ section {
     margin-bottom: 50px;
 }
 
+ol, ul {
+    margin-left: 35px;
+    font-size: 1.2rem;
+}
+
 h1 {
     margin: 15px 0;
     padding-left: 10px;
