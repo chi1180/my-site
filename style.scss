@@ -103,6 +103,54 @@ body {
 
             overflow: scroll;
 
+            .blog-preview {
+                width: 100%;
+                height: 90%;
+                overflow-y: scroll;
+
+                p {
+                    &:last-of-type {
+                        margin-top: 6%;
+                    }
+                }
+
+                h3 {
+                    margin-top: 6%;
+                    margin-bottom: 2%;
+                }
+            }
+
+            .blog-container {
+                width: 100%;
+                height: 90%;
+                overflow-y: scroll;
+
+                .blog-card {
+                    width: 100%;
+                    height: 20%;
+                    padding: 4%;
+                    margin: 8% 0;
+                    border-radius: calc(100vh / 160);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    cursor: pointer;
+                    transition: .3s;
+
+
+                    &:hover {
+                        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .blog-title {
+                        width: 100%;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.21);
+                    }
+
+                    .blog-description {
+                        font-size: .8em;
+                    }
+                }
+            }
+
             .container-title {
                 width: 100%;
                 text-align: center;
@@ -130,7 +178,7 @@ body {
                 }
             }
 
-            .message-container>a {
+            a {
                 transition: .3s;
 
                 &:hover {

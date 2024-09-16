@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 
     <section id="top">
         <div class="top-title">Chi1_site</div>
-        <div class="top-subtitle">Last edited&nbsp;&nbsp;<div id="last-edit-data">2024/09/15</div>
+        <div class="top-subtitle">Last edited&nbsp;&nbsp;<div id="last-edit-date">2024/09/15</div>
         </div>
     </section>
 
@@ -61,8 +62,12 @@
                 このポートフォリオサイトでは、自分のプロジェクトをブログのように掲載し、その内容や日々の発見、スキルアップについて書いていこうと思います。<br>
                 <br>
                 私は現在、以下の資格を持っており、今後も学習に励んでいきます。<br>
-                <a href="https://www.freecodecamp.org/certification/fccc270c309-fe95-47fe-aeed-839c2c79fce1/javascript-algorithms-and-data-structures">Javascript algorithms and data structures</a><br>
-                <a href="https://www.freecodecamp.org/certification/fccc270c309-fe95-47fe-aeed-839c2c79fce1/responsive-web-design">Responsive Web Design</a><br>
+                <a
+                    href="https://www.freecodecamp.org/certification/fccc270c309-fe95-47fe-aeed-839c2c79fce1/javascript-algorithms-and-data-structures">Javascript
+                    algorithms and data structures</a><br>
+                <a
+                    href="https://www.freecodecamp.org/certification/fccc270c309-fe95-47fe-aeed-839c2c79fce1/responsive-web-design">Responsive
+                    Web Design</a><br>
                 <br>
                 まだまだ知らないことだらけで、覚えるのも遅いので、日々頑張って学習を進めています。<br>
                 <br>
@@ -74,9 +79,11 @@
     <section id="blog">
         <div class="big-container">
             <div class="container-title">Latest blog</div>
+            <div class="blog-preview"></div>
         </div>
         <div class="small-container">
             <div class="container-title">Blogs</div>
+            <div class="blog-container"></div>
         </div>
     </section>
 
@@ -120,7 +127,8 @@
         </div>
         <div class="big-container">
             <div class="container-title">Send me a message</div>
-            <textarea class="message-input" id="message-input" autocomplete="off" placeholder="I'll be happy if you enter here and send me a message :-&rpar;"></textarea>
+            <textarea class="message-input" id="message-input" autocomplete="off"
+                placeholder="I'll be happy if you enter here and send me a message :-&rpar;"></textarea>
             <div id="send-btn"></div>
         </div>
     </section>
@@ -129,3 +137,4 @@
 </body>
 
 </html>
+
